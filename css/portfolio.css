@@ -30,6 +30,16 @@ header img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+.zoom {
+    transition: transform .2s; /* Animation */
+    width: 100px;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.4); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
 nav {
     background-color: #333;
     color: white;
@@ -59,55 +69,81 @@ section {
     padding: 20px;
 }
 
-/* Add space between section headings and content */
+
 h2, h3 {
     margin-bottom: 10px;
     color: #007BFF;
 }
 
-/* Add spacing between paragraphs */
+
 p {
     margin-bottom: 15px;
 }
 
-/* Style the "About Me" section */
+
 #about {
-    background-color: #fff;
+    background-color: blueviolet
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 30px;
 }
 
-/* Style the "My Work" section */
-#work {
+
+
+/* #work {
     background-color: #f4f4f4;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 30px;
+} */
+
+.project-images > div {
+    background: url(/watercolorbg.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: solid;
+    height: 350px;
 }
 
-.app {
-    margin-bottom: 20px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+.underline {
+    text-decoration: underline white;
 }
 
-.app:hover {
-    transform: scale(1.05);
+.button {
+    background-color:#000000; 
+    color:blueviolet; 
+    padding:10px; 
+    border-radius:50px;
 }
 
-.app img {
-    width: 100%;
-    max-width: 400px;
-    display: block;
-    margin: 0 auto;
-    cursor: pointer;
-    border-radius: 10px;
+.work-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-auto-rows: minmax(100px, auto);
 }
 
-/* Style the "Contact Me" section */
+.project-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    border: solid;
+}
+
+.image-sub-div {
+    position: relative;
+}
+
+.project-text {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+}
+
+#first_project {
+    grid-column: 1/3;
+}
+
+
 #contact {
     background-color: #007BFF;
     color: #fff;
@@ -116,7 +152,7 @@ p {
     padding: 30px;
 }
 
-/* Add responsive styles as needed */
+
 @media screen and (max-width: 600px) {
     nav ul {
         flex-direction: column;
