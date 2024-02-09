@@ -98,7 +98,7 @@ p {
 } */
 
 .project-images > div {
-    background: url(/watercolorbg.avif);
+    background: url(../images/watercolorbg.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     border: solid;
